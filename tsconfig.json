@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        // Lugar aonde vamos colocar os arquivos convertidos para js
+        "outDir": "./dist", 
+         // Para qual padrão em javascript vai ser convertido, nesse caso vamos converter para o padrão co
+        "module": "CommonJS",
+        // Qual tipo que ecmaScript vai ser convertido os js
+        "target": "ES2019",
+        "esModuleInterop": true,
+        "allowJs": true
+    }
+}
