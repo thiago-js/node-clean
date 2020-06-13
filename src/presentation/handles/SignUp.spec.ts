@@ -12,6 +12,7 @@ describe('SignUp Handler', () => {
     }
     const httpHandle = sut.start(httpRequest)
 
-    expect(httpHandle.StatusCode).toBe(400)
+    expect(httpHandle.statusCode).toBe(400)
+    expect(httpHandle.body).toEqual(new Error('Missing param: name'))
   })
 })
