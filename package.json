@@ -1,0 +1,7 @@
+{
+  "name": "node-clean",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "thiago-js <thiago.jsimao.me@gmail.com>",
+  "license": "MIT"
+}
