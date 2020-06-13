@@ -1,7 +1,17 @@
 export default class SignUp {
   start (httpResquest: any): any {
-    return {
-      StatusCode: 400
+    if (!httpResquest.body.name) {
+      return {
+        statusCode: 400,
+        body: new Error('Missing param: name')
+      }
+    }
+
+    if (!httpResquest.body.email) {
+      return {
+        statusCode: 400,
+        body: new Error('Missing param: email')
+      }
     }
   }
 }
