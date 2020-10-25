@@ -1,16 +1,19 @@
+import { HttpRequest, HttpResponse } from '../../protocols/http'
+import { MissingParamError } from '../errors/missing-param-errors'
+
 export class SignUpController {
-  handle (httpRequest: any): any {
+  handle (httpRequest: HttpRequest): HttpResponse {
     if (!httpRequest.body.name) {
       return {
         statusCode: 400,
-        body: new Error('Propert Name is required!')
+        body: new MissingParamError('Name')
       }
     }
 
     if (!httpRequest.body.email) {
       return {
         statusCode: 400,
-        body: new Error('Propert email is required!')
+        body: new MissingParamError('email')
       }
     }
   }
